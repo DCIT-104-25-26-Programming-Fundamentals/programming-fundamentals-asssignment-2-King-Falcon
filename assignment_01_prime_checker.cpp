@@ -37,3 +37,30 @@
 #include <iostream>
 using namespace std;
 
+int main (){
+    int num;
+std::cout<<"Enter a number: ";
+std::cin>> num ;
+
+bool isPrime= true;
+
+
+if (num <= 1) {
+    isPrime = false;
+}else{
+    for (int i = 2; i * i <= num; ++i){
+        if (num % i == 0){
+            isPrime = false;
+            break;
+        }
+    }
+}
+
+if (isPrime) {
+    std::cout << num << " is a Prime number" << std::endl;
+} else {
+    std::cout <<num << " is not a Prime number" << std::endl;
+}
+
+return 0;
+}
